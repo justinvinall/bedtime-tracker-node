@@ -4,5 +4,5 @@ module.exports = {
     password: 'node',
     host: 'localhost',
     dialect: 'mssql',
-    port: 1433
+    port: 1433,
 };
