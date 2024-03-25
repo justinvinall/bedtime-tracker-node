@@ -19,6 +19,12 @@ const models = initModels(sequelize);
 const bedtimeRouter = require('./routes/bedtimes')(models);
 app.use('/api/bedtimes', bedtimeRouter);
 
+const childRouter = require('./routes/children')(models);
+app.use('/api/children', childRouter);
+
+const prizeRouter = require('./routes/prizes')(models);
+app.use('/api/prizes', prizeRouter);
+
 // Start the server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

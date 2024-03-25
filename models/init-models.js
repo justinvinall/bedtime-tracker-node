@@ -8,8 +8,8 @@ function initModels(sequelize) {
   var Child = _Child(sequelize, DataTypes);
   var Prize = _Prize(sequelize, DataTypes);
 
-  Bedtime.belongsTo(Child, { as: "Child", foreignKey: "ChildId"});
-  Child.hasMany(Bedtime, { as: "Bedtimes", foreignKey: "ChildId"});
+  Bedtime.belongsTo(Child, { as: "Child", foreignKey: "childId"});
+  Child.hasMany(Bedtime, { as: "Bedtimes", foreignKey: "childId"});
 
   return {
     Bedtime,
