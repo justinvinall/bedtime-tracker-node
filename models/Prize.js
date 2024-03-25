@@ -1,27 +1,32 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Prize', {
-    PrizeId: {
+    prizeId: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      field: 'PrizeId'
     },
-    Name: {
+    name: {
       type: DataTypes.STRING(100),
-      allowNull: false
+      allowNull: false,
+      field: 'Name'
     },
-    Description: {
+    description: {
       type: DataTypes.STRING(500),
-      allowNull: true
+      allowNull: true,
+      field: 'Description'
     },
-    ImageUrl: {
+    imageUrl: {
       type: DataTypes.STRING(2048),
-      allowNull: true
+      allowNull: true,
+      field: 'ImageUrl'
     },
-    Priority: {
+    priority: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      field: 'Priority'
     }
   }, {
     sequelize,

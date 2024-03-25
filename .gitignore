@@ -5,4 +5,4 @@ package-lock.json
 *.gz
 
 # VS Code
-.vscode/
+#.vscode/

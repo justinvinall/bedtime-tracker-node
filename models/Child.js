@@ -1,15 +1,17 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Child', {
-    ChildId: {
+    childId: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      field: 'ChildId'
     },
-    Name: {
+    name: {
       type: DataTypes.STRING(100),
-      allowNull: false
+      allowNull: false,
+      field: 'Name'
     }
   }, {
     sequelize,

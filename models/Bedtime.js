@@ -1,35 +1,41 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('Bedtime', {
-    BedtimeId: {
+    bedtimeId: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      field: 'BedtimeId'
     },
-    ChildId: {
+    childId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'Child',
-        key: 'ChildId'
-      }
+        key: 'childId',
+      },
+      field: 'ChildId'
     },
-    SleepStart: {
+    sleepStart: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: false,
+      field: 'SleepStart'
     },
-    SleepEnd: {
+    sleepEnd: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: false,
+      field: 'SleepEnd'
     },
-    Success: {
+    success: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: false,
+      field: 'Success'
     },
-    IsNap: {
+    isNap: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: false,
+      field: 'IsNap'
     }
   }, {
     sequelize,
