@@ -17,6 +17,7 @@ function initModels(sequelize) {
     Prize,
   };
 }
+
 module.exports = initModels;
 module.exports.initModels = initModels;
 module.exports.default = initModels;
